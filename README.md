@@ -1,1 +1,1 @@
-Testing My ReadMe 
+This will be the Record of my JavaScript Dom Learning Progress.
