@@ -136,4 +136,7 @@ console.log(itemList.childNodes)
 //children
 console.log(itemList.children);
 
-console.log(document.head)
+// itemList.children[1].style.backgroundColor = 'yellow';
+for (let m = 0; m < itemList.children.length; m++) {
+    itemList.children[m].style.backgroundColor = 'yellow'
+}
