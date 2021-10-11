@@ -140,3 +140,16 @@ console.log(itemList.children);
 for (let m = 0; m < itemList.children.length; m++) {
     itemList.children[m].style.backgroundColor = 'yellow'
 }
+
+//Selecting with firstChild property, though this might mostly not be needed
+console.log(itemList.firstChild)
+
+//Selecting with firstElementChild property, this is more useful and Easy to use to firstChild property
+console.log(itemList.firstElementChild)
+
+//Selecting with lastChild property is the same as selecting with firstChild property the difference is that lastChild selects the last element and firstChild selects the first Element
+
+console.log(itemList.lastChild)
+
+//Selecting with lastElementChild property is the same as selecting with firstElementChild property the difference is that lastElementChild selects the last element and firstElementChild selects the first Element
+console.log(itemList.lastElementChild)
