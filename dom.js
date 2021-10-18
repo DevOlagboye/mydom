@@ -153,3 +153,16 @@ console.log(itemList.lastChild)
 
 //Selecting with lastElementChild property is the same as selecting with firstElementChild property the difference is that lastElementChild selects the last element and firstElementChild selects the first Element
 console.log(itemList.lastElementChild)
+    //Selecting with Sibling
+    //nextSibling
+console.log(itemList.nextSibling);
+//nextSibling will give us a Node List Collection in the console it is adviceable to use nextElementSibling
+
+//nextElementSibling
+console.log(itemList.nextElementSibling)
+
+//previousSibling
+console.log(itemList.previousSibling)
+    //previousElementSibling
+console.log(itemList.previousElementSibling)
+itemList.previousElementSibling.style.color = "green";
