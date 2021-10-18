@@ -11,3 +11,5 @@ Will be progressing to selecting with siblings.
 Working with Sibling is done, finally proceed to working on how to create DOM elements and how to Insert them into the Dom,
 
 Worked on a little practical on how to create new DOM Element with the createElement method and Inserted it in the DOM and it worked perfectly well.
+
+Will be progressing to Events
