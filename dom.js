@@ -166,3 +166,47 @@ console.log(itemList.previousSibling)
     //previousElementSibling
 console.log(itemList.previousElementSibling)
 itemList.previousElementSibling.style.color = "green";
+
+
+console.log(itemList.nextElementSibling = document.createElement('div'))
+
+//Creating DOM Element from JavaScript and Inserting them.
+
+//createElement Method
+
+let newDiv = document.createElement('div');
+//Add Class
+newDiv.className = 'Hello'
+
+//Add Id
+newDiv.id = 'Hello1'
+
+//Add Attribute
+newDiv.setAttribute('title', 'Hello Div')
+
+//Create TextNode, we have only added title attribute to the div created as well as an id, no text content is inside yet, to do this we have to create a textNode
+
+let newDivText = document.createTextNode('Hello World')
+    //After Creating the TextNode the Next thing is to append it to the div using the appenChild() method
+newDiv.appendChild(newDivText);
+//If we want to insert this Div into the DOM we need to figure out where we want it to be in the DOM
+
+let container = document.querySelector("header .container")
+let h1 = document.querySelector("header h1")
+
+container.insertBefore(newDiv, h1)
+
+console.log(newDiv);
+
+//Testing Creating Element and Inserting it.
+let add = () => {
+    let newItems = document.querySelector("#items")
+    let newItem = document.createElement('li')
+    newItem.className = 'list-group-item'
+    let newItemText = document.createTextNode("Item 4")
+    newItem.appendChild(newItemText)
+    newItem.style.backgroundColor = 'yellow'
+    let lastItem = newItems.lastElementChild
+
+    newItems.insertBefore(newItem, lastItem)
+}
