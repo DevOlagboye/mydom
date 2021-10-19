@@ -210,3 +210,18 @@ let add = () => {
 
     newItems.insertBefore(newItem, lastItem)
 }
+
+
+
+//Adding Events Using just the function method
+//The first way
+let button = document.getElementById('button').addEventListener('click', function() {
+    console.log(document.querySelector('#items').children[0].innerHTML = "Not Item 1")
+})
+
+//Adding Events Using the Named funtion
+let show = () => {
+    let inputForm = document.querySelector(".form-control").value
+    alert("I Submitted " + inputForm)
+}
+let inputButton = document.getElementById('btn').addEventListener('click', show);
