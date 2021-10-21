@@ -225,3 +225,9 @@ let show = () => {
     alert("I Submitted " + inputForm)
 }
 let inputButton = document.getElementById('btn').addEventListener('click', show);
+
+//Adding Event Parameters
+let eventIng = (e) => {
+    console.log(e)
+}
+let btn = document.getElementById('btn-btn').addEventListener('click', eventIng)
