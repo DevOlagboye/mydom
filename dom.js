@@ -215,8 +215,16 @@ let add = () => {
 
 //Adding Events Using just the function method
 //The first way
-let button = document.getElementById('button').addEventListener('click', function() {
-    console.log(document.querySelector('#items').children[0].innerHTML = "Not Item 1")
+let button = document.getElementById('button').addEventListener('click', function(j) {
+    //console.log(document.querySelector('#items').children[0].innerHTML = "Not Item 1")
+    let myItems = document.querySelector('#items').children
+    for (let q = 0; q < myItems.length; q++) {
+        if (j.ctrlKey == true) {
+            myItems[q].innerHTML = "Not an Item"
+        } else {
+            return myItems
+        }
+    }
 })
 
 //Adding Events Using the Named funtion
@@ -228,6 +236,36 @@ let inputButton = document.getElementById('btn').addEventListener('click', show)
 
 //Adding Event Parameters
 let eventIng = (e) => {
-    console.log(e)
+    console.log(e.view.chrome)
+        //Working on the Key Event, trying to change Elements based on the key pressed down while clicking on the button
+    let output = document.getElementById('output')
+    let content = document.createTextNode('The list of Classes used in this Elements are ' + e.target.classList + '')
+    output.appendChild(content)
+        //if the altKey is pressed down while clicking the button the content changes to capital letter
+    if (e.altKey == true) {
+        output.style.textTransform = "uppercase"
+    } else {
+        output.style.textTransform = "normalise"
+    }
+
 }
 let btn = document.getElementById('btn-btn').addEventListener('click', eventIng)
+
+let runEvents = (y) => {
+    console.log('Event Type:' + y.type)
+}
+let newBtn = document.getElementById('btn-btn-btn')
+
+//Mouse events
+
+//Click
+//newBtn.addEventListener('click', runEvents)
+
+//Double Click
+//newBtn.addEventListener('dblclick', runEvents)
+
+//Mouse Down
+//newBtn.addEventListener('mousedown', runEvents)
+
+//Mouse Up
+newBtn.addEventListener('mouseup', runEvents)
