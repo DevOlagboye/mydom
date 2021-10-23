@@ -253,6 +253,8 @@ let btn = document.getElementById('btn-btn').addEventListener('click', eventIng)
 
 let runEvents = (y) => {
     console.log('Event Type:' + y.type)
+        //output.innerHTML = '<h3>MouseX: ' + y.offsetX + '</h3>' + '<h3>MouseY: ' + y.offsetY + '</h3>'
+    box.style.background = "rgb(" + y.offsetX + ", " + y.offsetY + ", 40)"
 }
 let newBtn = document.getElementById('btn-btn-btn')
 
@@ -268,4 +270,23 @@ let newBtn = document.getElementById('btn-btn-btn')
 //newBtn.addEventListener('mousedown', runEvents)
 
 //Mouse Up
-newBtn.addEventListener('mouseup', runEvents)
+//newBtn.addEventListener('mouseup', runEvents)
+
+//Other Types Of Events but not with the button
+
+//let box = document.getElementById("box")
+
+//Mouse Enter Event
+//box.addEventListener('mouseenter', runEvents)
+
+//Mouse Leave Event
+//box.addEventListener('mouseleave', runEvents)
+
+//Mouse Over Event
+//box.addEventListener('mouseover', runEvents)
+
+//Mouse Out Event
+//box.addEventListener('mouseout', runEvents)
+
+//Mouse Move Event
+box.addEventListener('mousemove', runEvents)
