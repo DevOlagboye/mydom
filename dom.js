@@ -253,7 +253,7 @@ let btn = document.getElementById('btn-btn').addEventListener('click', eventIng)
 
 let runEvents = (y) => {
     console.log('Event Type:' + y.type)
-        //output.innerHTML = '<h3>MouseX: ' + y.offsetX + '</h3>' + '<h3>MouseY: ' + y.offsetY + '</h3>'
+    output.innerHTML = '<h3>MouseX: ' + y.offsetX + '</h3>' + '<h3>MouseY: ' + y.offsetY + '</h3>'
     box.style.background = "rgb(" + y.offsetX + ", " + y.offsetY + ", 40)"
 }
 let newBtn = document.getElementById('btn-btn-btn')
