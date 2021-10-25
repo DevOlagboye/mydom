@@ -298,12 +298,28 @@ box.addEventListener('mousemove', runEvents)
 let itemInput = document.querySelector('input[type="text"]')
 let form = document.querySelector('form')
 let myInput = document.querySelector('#myinput')
+let myBtn = document.querySelector('#btn')
 let keyDown = (k) => {
     console.log('Event Type:' + k.type)
-        // myInput.innerHTML = '<h3>' + k.target.value + '</h3>'
+    myInput.innerHTML = '<h3>' + k.target.value + '</h3>'
 }
 itemInput.addEventListener('keydown', keyDown)
 
 //KeyUp Event
 
 //itemInput.addEventListener('keyup', keyDown)
+
+//Key Press Event
+//itemInput.addEventListener('keypress', keyDown)
+
+//Other Events Attached to Input field
+//Focus
+let focus = () => {
+    myBtn.removeAttribute('disabled')
+}
+itemInput.addEventListener('focus', focus)
+
+let blur = () => {
+    myBtn.setAttribute('disabled', 'disabled')
+}
+itemInput.addEventListener('blur', blur)
