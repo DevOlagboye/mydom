@@ -299,6 +299,6 @@ let form = document.querySelector('form')
 let myInput = document.querySelector('#myinput')
 let keyDown = (k) => {
     console.log('Event Type:' + k.type)
-    myInput.innerHTML = k.target.value
+    myInput.innerHTML = '<h3>' + k.target.value + '</h3>'
 }
 itemInput.addEventListener('keydown', keyDown)
