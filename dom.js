@@ -78,7 +78,7 @@ mainheader.style.borderBottom = '4px solid #ccc';
 //using input
 
 let input = document.querySelector('input');
-input.value = 'Hello World'
+input.value = ''
 
 let submit = document.querySelector('input[type="submit"]')
 submit.value = 'SEND';
@@ -296,8 +296,9 @@ box.addEventListener('mousemove', runEvents)
 
 let itemInput = document.querySelector('input[type="text"]')
 let form = document.querySelector('form')
-
+    //let myInput = document.querySelector('#myinput')
 let keyDown = (k) => {
     console.log('Event Type:' + k.type)
+        //myInput.innerHTML = k.target.value
 }
 itemInput.addEventListener('keydown', keyDown)
