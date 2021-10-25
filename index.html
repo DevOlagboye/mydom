@@ -21,7 +21,12 @@
             <form class="form-inline mb-3">
                 <input type="text" class="form-control mr-2">
                 <input type="submit" class="btn btn-dark" value="Submit" id="btn" disabled>
-                <!-- The Old Way of Adding Event -->
+                <select class="form-control mr-2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button class="btn btn-success" id="form-btn" type="submit"> Submit</button>
             </form>
             <h2 class="title" onclick="add()">Items</h2>
             <ul id="items" class="list-group">

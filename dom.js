@@ -336,3 +336,21 @@ itemInput.addEventListener('blur', blur)
 //Input Event
 
 //itemInput.addEventListener('input', keyDown)
+
+//Change Event for Selecting
+
+let select = document.querySelector("select")
+let selectFunc = (t) => {
+    console.log(t.target.value)
+}
+select.addEventListener('change', selectFunc)
+
+//Submit Event
+//Note we need to prevent the form from performing the normal way it performs before the Submit event can work
+let formBtn = document.querySelector("#form-btn")
+let formFunc = (f) => {
+    f.preventDefault()
+    console.log("Event Type: " + f.type)
+    console.log(f.target)
+}
+form.addEventListener('submit', formFunc)
