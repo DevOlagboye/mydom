@@ -290,3 +290,14 @@ let newBtn = document.getElementById('btn-btn-btn')
 
 //Mouse Move Event
 box.addEventListener('mousemove', runEvents)
+
+
+//Input Events
+
+let itemInput = document.querySelector('input[type="text"]')
+let form = document.querySelector('form')
+
+let keyDown = (k) => {
+    console.log('Event Type:' + k.type)
+}
+itemInput.addEventListener('keydown', keyDown)
