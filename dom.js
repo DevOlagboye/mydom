@@ -293,12 +293,17 @@ box.addEventListener('mousemove', runEvents)
 
 
 //Input Events
+//KeyDown Event
 
 let itemInput = document.querySelector('input[type="text"]')
 let form = document.querySelector('form')
 let myInput = document.querySelector('#myinput')
 let keyDown = (k) => {
     console.log('Event Type:' + k.type)
-    myInput.innerHTML = '<h3>' + k.target.value + '</h3>'
+        // myInput.innerHTML = '<h3>' + k.target.value + '</h3>'
 }
 itemInput.addEventListener('keydown', keyDown)
+
+//KeyUp Event
+
+//itemInput.addEventListener('keyup', keyDown)
