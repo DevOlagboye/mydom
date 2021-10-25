@@ -319,7 +319,20 @@ let focus = () => {
 }
 itemInput.addEventListener('focus', focus)
 
+//Blur
 let blur = () => {
     myBtn.setAttribute('disabled', 'disabled')
 }
 itemInput.addEventListener('blur', blur)
+
+//Cut Event
+
+//itemInput.addEventListener('cut', keyDown)
+
+//Paste Event
+
+//itemInput.addEventListener('paste', keyDown)
+
+//Input Event
+
+//itemInput.addEventListener('input', keyDown)
