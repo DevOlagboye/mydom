@@ -351,6 +351,9 @@ let formBtn = document.querySelector("#form-btn")
 let formFunc = (f) => {
     f.preventDefault()
     console.log("Event Type: " + f.type)
-    console.log(f.target)
+    for (let b = 0; b < f.target.length; b++) {
+        console.log(f.target[b].value)
+    }
+
 }
 form.addEventListener('submit', formFunc)
