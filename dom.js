@@ -364,3 +364,84 @@
 
 // }
 // form.addEventListener('submit', formFunc)
+
+
+
+
+//BEGINING OF THE FINAL DOM PROJECT
+//LET'S GO!!!!!
+
+//(i)   Firstly, In this final Project we want to be able to add a New Item through the form and that will take an event (submit event)
+
+let form = document.getElementById("addForm")
+let itemList = document.getElementById("items")
+let filter = document.getElementById("filter")
+
+//Creating the addItem Function
+//Passed in event object (e)
+let addItem = (e) => {
+        e.preventDefault()
+            //After Preventing the Normal behaviour of the form
+
+        //Let's get the Value of the Input
+        let newItem = document.getElementById("item").value
+
+        //After having this we need to Create a New <li></li> inside the list and add it with the value gotten from the newItem input
+        //Creating New <li></li> Element
+        let newLi = document.createElement('li')
+            //Adding A class name to it
+        newLi.className = 'list-group-item'
+            //Append the Text value coming from the input to the <li></li>Element
+            //Add Text Node with input Value
+        newLi.appendChild(document.createTextNode(newItem))
+            //Note: At this point the Button is missing because we are yet to create the button
+            //Let's Create that 
+        let newBtn = document.createElement('button')
+            //Add Classes to newBtn 
+        newBtn.className = "btn btn-danger btn-sm float-right delete"
+            //Add X to the innerHTML of the button
+        newBtn.innerHTML = "X"
+            //Append newBtn to the li
+        newLi.appendChild(newBtn)
+            //Now Let's Add the newLi to the ItemList
+        itemList.appendChild(newLi)
+    }
+    //Creating the Form Submit Event
+form.addEventListener('submit', addItem)
+    //Creating the removeItem Function
+    //Pass in the event object (e)
+let removeItem = (e) => {
+        if (e.target.classList.contains('delete'))
+        //Added a Simple Confirmation
+            if (confirm('Are you sure?')) {
+            //Created this variable to be able to select the current parentElement clicked to avoid some issues
+            let li = e.target.parentElement
+                //Then remove the child of the current element selected
+            itemList.removeChild(li)
+        }
+    }
+    //Creating the Delete Event
+itemList.addEventListener('click', removeItem)
+
+//Creating filterItems Function
+let filterItems = (e) => {
+        //Convert text to lowercase
+        let text = e.target.value.toLowerCase()
+            //Select all elements in the itemList
+        let allItems = itemList.getElementsByTagName('li')
+            //note at this point if allItems is console logged we have an HTML collection and we need to convert it to an array
+            //Converting allItems to an Array
+        Array.from(allItems).forEach(function(item) {
+            let itemName = item.firstChild.textContent
+                //Comparing the Item Name to what is inputed in the Search Box
+            if (itemName.toLowerCase().indexOf(text) != -1) {
+                item.style.display = 'block'
+            } else {
+                item.style.display = 'none'
+            }
+        })
+
+
+    }
+    //Creating Filter Event
+filter.addEventListener('keyup', filterItems)
