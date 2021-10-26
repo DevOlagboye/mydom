@@ -10642,5 +10642,7 @@ h3 {
     text-align: center;
 }
 
-
-/*# sourceMappingURL=bootstrap.min.css.map */
+#icon {
+    font-size: 16px;
+    color: #fff;
+}
