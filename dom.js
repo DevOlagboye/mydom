@@ -446,16 +446,16 @@ let filterItems = (e) => {
     //Creating Filter Event
 filter.addEventListener('keyup', filterItems)
 
-let icon = document.getElementById('icon')
+// let icon = document.getElementById('icon')
 
-let change = (e) => {
-    e.preventDefault()
-    icon.className = 'fas fa-times'
-}
-icon.addEventListener('mouseover', change)
+// let change = (e) => {
+//     e.preventDefault()
+//     icon.className = 'fas fa-times'
+// }
+// icon.addEventListener('mouseover', change)
 
-let back = (e) => {
-    e.preventDefault()
-    icon.className = 'fas fa-bars'
-}
-icon.addEventListener('mouseout', back)
+// let back = (e) => {
+//     e.preventDefault()
+//     icon.className = 'fas fa-bars'
+// }
+// icon.addEventListener('mouseout', back)
